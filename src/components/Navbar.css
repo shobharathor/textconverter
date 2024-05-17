@@ -1,0 +1,81 @@
+nav {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background-color: #F8F9FA;
+    border: none;
+}
+
+nav .left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav .left .brand {
+    font-size: x-large;
+    color: #06B6D4;
+    font-weight: 500;
+}
+
+nav .left ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+    color: gray;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* darkmode-color */
+.dark-first {
+    background-color: #212529;
+}
+
+
+/* css for toggle-button */
+
+input[type="checkbox"] {
+    display: none;
+}
+  
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    background-color: rgb(241, 161, 12);
+    border-radius: 10px; /* Adjust border radius as needed */
+    cursor: pointer;
+}
+  
+#circle {
+    width: 16px; /* Adjust width as needed */
+    height: 16px; /* Adjust height as needed */
+    background-color: white;
+    position: absolute;
+    top: 2px; /* Adjust top position as needed */
+    left: 2px; /* Adjust left position as needed */
+    border: 2px solid white;
+    border-radius: 50%; /* Make it circular */
+    transition: 0.4s ease left;
+}
+  
+#toggle:checked + #switch #circle {
+    left: 22px; /* Move circle to the right when checked */
+}
+  
+
+
+@media screen and (max-width: 538px) {
+    nav .left ul {
+        display: none;
+    }
+}
